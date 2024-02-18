@@ -268,6 +268,9 @@ header nav div:nth-of-type(2) {
   justify-content: center;
   align-items: center;
 }
+.logo img {
+  width: 200px;
+}
 
 main {
   grid-row: 2/3;
@@ -283,7 +286,7 @@ footer {
   gap: 30px;
 }
 
-.about {
+.about-flex {
   display: flex;
   flex-direction: column;
   gap: 100px;
@@ -342,23 +345,75 @@ footer {
   position: relative;
   top: -100px;
 }
-
 .about-box p {
   max-width: 500px;
   padding: 100px 50px 100px 50px;
   background-color: orange;
 }
 
-.or-go-to {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-}
-
 .social-a {
   text-decoration: none;
   color: white;
+}
+
+/*Mobil*/
+.hero-mobil {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  background-color: black;
+}
+.hero-mobil img {
+  width: 100%;
+}
+.hero-mobil div {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  color: white;
+  padding-bottom: 50px;
+}
+
+.video-section {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+.video-section div {
+  width: 100%;
+  aspect-ratio: 3/2;
+}
+
+.what-we-do-mobil {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.contact-mobil {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.nederst-nav-mobil {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
 }
 
 /*Media queries*/
@@ -373,5 +428,15 @@ footer {
 @media screen and (min-width: 1700px) {
   .grid1 {
     grid-template-columns: 1fr 1700px 1fr;
+  }
+}
+@media screen and (max-width: 750px) {
+  .storre-end-mobil {
+    display: none;
+  }
+}
+@media screen and (min-width: 751px) {
+  .mobil {
+    display: none;
   }
 }/*# sourceMappingURL=dreamshot.css.map */

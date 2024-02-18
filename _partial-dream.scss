@@ -2,6 +2,8 @@ $bg-orange: orange;
 $bg-black: black;
 $padding-left: 100px;
 $padding-right: 100px;
+$padding-bund: 50px;
+$padding-top: 50px;
 
 @mixin flex-column($gap:50px) {  
     display: flex;

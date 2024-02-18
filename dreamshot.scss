@@ -259,6 +259,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+        img {
+            width: 200px;
+        }
   }
   
   main {
@@ -275,10 +279,8 @@
     gap: 30px;
   }
   
-  .about {
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
+  .about-flex {
+    @include partial-dream.flex-column($gap:100px);
   }
   
   .bg-white {
@@ -333,24 +335,71 @@
     justify-content: center;
     position: relative;
     top: -100px;
-  }
-  
-  .about-box p {
-    max-width: 500px;
-    padding: 100px 50px 100px 50px;
-    background-color: orange;
-  }
-  
-  .or-go-to {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
+
+        p {
+            max-width: 500px;
+            padding: 100px 50px 100px 50px;
+            background-color: partial-dream.$bg-orange;
+        }
   }
   
   .social-a {
     text-decoration: none;
     color: white;
+  }
+
+  /*Mobil*/
+  .hero-mobil {
+    @include partial-dream.flex-column;
+    background-color: partial-dream.$bg-black;
+
+        img {
+            width: 100%;
+        }
+        div {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            color: white;
+            padding-bottom: partial-dream.$padding-bund;
+        }
+  }
+
+  .video-section {
+    @include partial-dream.flex-column;
+    align-items: center;
+    padding-bottom: partial-dream.$padding-bund;
+    padding-top: partial-dream.$padding-top;
+
+        div {
+            width: 100%;
+            aspect-ratio: 3/2;
+        }
+  }
+
+  .what-we-do-mobil {
+    @include partial-dream.flex-column;
+    align-items: center;
+    background-color: partial-dream.$bg-black;
+    color: white;
+    padding-top: partial-dream.$padding-top;
+    padding-bottom: partial-dream.$padding-bund;
+  }
+
+  .contact-mobil {
+    @include partial-dream.flex-column;
+    align-items: center;
+    padding-top: partial-dream.$padding-top;
+    padding-bottom: partial-dream.$padding-bund;
+  }
+
+  .nederst-nav-mobil {
+    padding-top: partial-dream.$padding-top;
+    padding-bottom: partial-dream.$padding-bund;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
   }
   
   /*Media queries*/
@@ -365,5 +414,17 @@
   @media screen and (min-width: 1700px) {
     .grid1 {
       grid-template-columns: 1fr 1700px 1fr;
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    .storre-end-mobil {
+        display: none;
+    }
+  }
+
+  @media screen and (min-width: 751px) {
+    .mobil {
+        display: none;
     }
   }
