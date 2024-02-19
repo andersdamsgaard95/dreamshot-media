@@ -90,6 +90,7 @@ h3 {
   align-items: center;
   justify-content: center;
   background-color: black;
+  height: 500px;
 }
 
 .nederst-nav-hojre {
@@ -338,6 +339,17 @@ footer {
   background-color: black;
 }
 
+.hero-about {
+  max-width: 100%;
+  height: 500px;
+  background-color: purple;
+  margin-right: 50px;
+  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .about-box {
   grid-column: 2/3;
   display: flex;
@@ -409,11 +421,69 @@ footer {
 }
 
 .nederst-nav-mobil {
-  padding-top: 50px;
-  padding-bottom: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+}
+
+.kompetence-box-mobil {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-bottom: 50px;
+}
+.kompetence-box-mobil div {
+  width: 100%;
+  aspect-ratio: 3/2;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.kompetence-box-mobil div img {
+  width: 100%;
+}
+.kompetence-box-mobil h2, .kompetence-box-mobil p, .kompetence-box-mobil h3 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.kompetence-box-mobil a {
+  align-self: center;
+}
+
+.about-hero-section-mobil {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.about-hero-section-mobil div:nth-of-type(2) {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.about-hero-section-mobil div:nth-of-type(2) p {
+  background-color: orange;
+  padding: 100px 50px 100px 50px;
+}
+
+.about-section-mobil {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.about-section-mobil div {
+  width: 100%;
+  aspect-ratio: 3/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.about-section-mobil div img {
+  width: 100%;
 }
 
 /*Media queries*/
@@ -434,9 +504,24 @@ footer {
   .storre-end-mobil {
     display: none;
   }
+  .nederst-nav-hojre {
+    height: 250px;
+  }
+  .nederst-nav-venstre {
+    height: 250px;
+  }
+  .hero-about {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
 }
 @media screen and (min-width: 751px) {
   .mobil {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  header nav div:nth-of-type(1) {
     display: none;
   }
 }/*# sourceMappingURL=dreamshot.css.map */
