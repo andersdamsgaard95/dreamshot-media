@@ -326,12 +326,16 @@
     height: 200px;
   }
 
+  .contact-box {
+    width: 550px;
+  }
+  
   form {
         @include partial-dream.flex-column;
         align-items: start;
         color: white;
         font-size: 1.5rem;
-        width: 550px;
+        width: 100%;
 
             div {
                 @include partial-dream.flex-column($gap: 10px);
@@ -559,6 +563,22 @@
     .hero-about {
         margin-right: 25px;
         margin-left: 25px;
+    }
+
+    .contact-box {
+        width: 100%;
+        max-width: 550px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    form div:nth-of-type(3) {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    input[type="submit"] {
+        align-self: center;
     }
   }
 

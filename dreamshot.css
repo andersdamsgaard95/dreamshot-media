@@ -335,6 +335,10 @@ footer {
   height: 200px;
 }
 
+.contact-box {
+  width: 550px;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -342,7 +346,7 @@ form {
   align-items: start;
   color: white;
   font-size: 1.5rem;
-  width: 550px;
+  width: 100%;
 }
 form div {
   display: flex;
@@ -566,6 +570,19 @@ form div:nth-of-type(3) div input {
   .hero-about {
     margin-right: 25px;
     margin-left: 25px;
+  }
+  .contact-box {
+    width: 100%;
+    max-width: 550px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  form div:nth-of-type(3) {
+    flex-direction: column;
+    max-width: 100%;
+  }
+  input[type=submit] {
+    align-self: center;
   }
 }
 @media screen and (min-width: 751px) {
