@@ -143,12 +143,10 @@
   
   .video-container {
     grid-column: 2/3;
-  }
-  
-  .video {
     background-color: black;
     width: 100%;
     aspect-ratio: 3/2;
+
   }
   
   .text-right {
@@ -298,14 +296,15 @@
   
   footer {
     grid-row: 3/4;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-around;
     padding: 50px;
 
         address:nth-of-type(1) {
             grid-column: 1/2;
             @include partial-dream.flex-column($gap:10px);
             justify-content: center;
+            align-items: start;
             opacity: 60%;
 
                 a {
@@ -318,6 +317,7 @@
             grid-column: 2/3;
             @include partial-dream.flex-column($gap:10px);
             justify-content: center;
+            align-items: start;
             opacity: 60%;
         }
 
@@ -325,6 +325,7 @@
             grid-column: 3/4;
             @include partial-dream.flex-column($gap:10px);
             justify-content: center;
+            align-items: start;
             
                 a {
                     text-decoration: none;
@@ -355,14 +356,6 @@
     grid-column: 2/3;
   }
   
-  .kontakt-formular {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    width: 100%;
-    gap: 50px;
-  }
-  
   .flex-column-gap50 {
     display: flex;
     flex-direction: column;
@@ -371,19 +364,6 @@
   
   .width-100 {
     width: 100%;
-  }
-  
-  .kontakt-felt {
-    background-color: white;
-    padding: 10px;
-    width: 45%;
-  }
-  
-  .kontakt-felt-stor {
-    background-color: white;
-    padding: 10px;
-    width: 100%;
-    height: 200px;
   }
 
   .contact-box {
