@@ -16,9 +16,9 @@ $padding-top: 50px;
     padding-bottom: $pad-bund;
 }
 
-@mixin cta {
-    background-color: white;
-    color: black;
+@mixin cta($bg:black, $color:white) {
+    background-color: $bg;
+    color: $color;
     width: fit-content;
     padding: 10px 40px 10px 40px;
     white-space: nowrap;

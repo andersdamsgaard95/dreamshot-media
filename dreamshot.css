@@ -43,13 +43,13 @@ h3 {
 .grid2columns-gap {
   display: grid;
   grid-template-columns: 3fr 2fr;
-  gap: 30px;
+  /*gap: 30px;*/
 }
 
 .grid2columns-2-3-gap {
   display: grid;
   grid-template-columns: 2fr 3fr;
-  gap: 30px;
+  /*gap: 30px;*/
 }
 
 .grid2columns-right {
@@ -80,6 +80,11 @@ h3 {
   background-color: orange;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.tandhjul {
+  max-width: 100%;
 }
 
 .nederst-nav-venstre {
@@ -89,8 +94,7 @@ h3 {
   gap: 20px;
   align-items: center;
   justify-content: center;
-  background-color: black;
-  height: 500px;
+  background-color: purple;
 }
 
 .nederst-nav-hojre {
@@ -101,21 +105,16 @@ h3 {
   align-items: center;
   justify-content: center;
   background-color: orange;
-  height: 500px;
-}
-.nederst-nav-hojre a {
-  background-color: white;
-  color: black;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 10px 40px 10px 40px;
-  white-space: nowrap;
-  text-decoration: none;
-  transition: all 0.3s;
-}
-.nederst-nav-hojre a:hover {
-  background-color: black;
-  color: white;
+  height: 400px;
+  /*a {
+      @include partial-dream.cta;
+      transition: all 0.3s;
+
+          &:hover {
+              background-color: partial-dream.$bg-black;
+              color: white;
+          }
+  }*/
 }
 
 .about-img {
@@ -125,7 +124,6 @@ h3 {
 .left-img-container {
   grid-column: 1/2;
   height: 600px;
-  background-color: black;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -155,6 +153,7 @@ h3 {
   padding-left: 30px;
   display: flex;
   flex-direction: column;
+  gap: 50px;
   justify-content: center;
 }
 
@@ -211,8 +210,8 @@ h3 {
 }
 
 .knap {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   width: -moz-fit-content;
   width: fit-content;
   padding: 10px 40px 10px 40px;
@@ -222,11 +221,12 @@ h3 {
 }
 .knap:hover {
   background-color: orange;
+  color: black;
 }
 
 body {
   display: grid;
-  grid-template-rows: 75px 1fr auto;
+  grid-template-rows: 100px 1fr auto;
   min-height: 100vh;
 }
 
@@ -347,18 +347,11 @@ footer div a {
 .about-flex {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 200px;
 }
 
 .bg-white {
   background-color: white;
-}
-
-.tandhjul-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  grid-column: 2/3;
 }
 
 .flex-column-gap50 {
@@ -380,7 +373,6 @@ form {
   flex-direction: column;
   gap: 50px;
   align-items: start;
-  color: white;
   font-size: 1.5rem;
   width: 100%;
 }
@@ -419,6 +411,7 @@ form div:nth-of-type(3) div input {
 }
 
 .contact-section {
+  background-color: #edbd64;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -426,6 +419,20 @@ form div:nth-of-type(3) div input {
 }
 .contact-section input {
   align-self: center;
+}
+
+.submit-knap {
+  background-color: white;
+  color: black;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 40px 10px 40px;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.submit-knap:hover {
+  background-color: orange;
 }
 
 .bg-black {
@@ -449,6 +456,7 @@ form div:nth-of-type(3) div input {
   justify-content: center;
   position: relative;
   top: -100px;
+  margin-bottom: 100px;
 }
 .about-box p {
   max-width: 500px;
@@ -462,11 +470,16 @@ form div:nth-of-type(3) div input {
 }
 
 /*Mobil*/
+.mobil-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+}
+
 .hero-mobil {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  background-color: black;
 }
 .hero-mobil img {
   width: 100%;
@@ -476,8 +489,6 @@ form div:nth-of-type(3) div input {
   justify-content: center;
   gap: 50px;
   flex-wrap: wrap;
-  color: white;
-  padding-bottom: 50px;
 }
 
 .video-section {
@@ -485,8 +496,6 @@ form div:nth-of-type(3) div input {
   flex-direction: column;
   gap: 50px;
   align-items: center;
-  padding-bottom: 50px;
-  padding-top: 50px;
 }
 .video-section div {
   width: 100%;
@@ -498,10 +507,6 @@ form div:nth-of-type(3) div input {
   flex-direction: column;
   gap: 50px;
   align-items: center;
-  background-color: black;
-  color: white;
-  padding-top: 50px;
-  padding-bottom: 50px;
 }
 
 .contact-mobil {
@@ -509,23 +514,20 @@ form div:nth-of-type(3) div input {
   flex-direction: column;
   gap: 50px;
   align-items: center;
-  padding-top: 50px;
+  background-color: #edbd64;
   padding-bottom: 50px;
+  padding-top: 50px;
 }
 
 .nederst-nav-mobil {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
 }
 
 .kompetence-box-mobil {
-  background-color: black;
-  color: white;
   display: flex;
   flex-direction: column;
   gap: 50px;
-  padding-bottom: 50px;
 }
 .kompetence-box-mobil div {
   width: 100%;
