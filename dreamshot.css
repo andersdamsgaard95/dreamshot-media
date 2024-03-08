@@ -56,15 +56,6 @@ p {
   /*gap: 30px;*/
 }
 
-.grid2columns-gap::after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 10%;
-  width: 100px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
-}
-
 .grid2columns-2-3-gap {
   display: grid;
   grid-template-columns: 2fr 3fr;
@@ -89,13 +80,11 @@ p {
 
 .hero {
   grid-column: 2/3;
-  background-color: blueviolet;
   height: 500px;
 }
 
 .img-container-right {
   grid-column: 2/3;
-  background-color: orange;
   height: 650px;
   width: 100%;
   display: flex;
@@ -109,7 +98,6 @@ p {
 
 .img-container-right-portrait-img {
   grid-column: 2/3;
-  background-color: orange;
   height: 650px;
   display: flex;
   align-items: center;
@@ -188,20 +176,21 @@ p {
   background-position: center;
   background-size: cover;
   color: white;
-  /*a {
-      @include partial-dream.cta;
-      transition: all 0.3s;
-
-          &:hover {
-              background-color: partial-dream.$bg-black;
-              color: white;
-          }
-  }*/
 }
 
 .left-img-container {
   height: 600px;
   grid-column: 1/2;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.right-img-container {
+  height: 600px;
+  grid-column: 2/3;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -227,6 +216,12 @@ p {
   height: 100%;
 }
 
+.gradient-left {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
 .bg-img-container {
   background-image: url(røgen.png);
   overflow: hidden;
@@ -240,7 +235,6 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  /*aspect-ratio: 3/2;*/
 }
 
 .text-right {
@@ -254,10 +248,30 @@ p {
 
 .text-left {
   grid-column: 1/2;
+  grid-row: 1/2;
   padding-right: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.text-left-about {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.text-right-about {
+  grid-column: 2/3;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
 }
 
 .contact-main {
@@ -512,12 +526,6 @@ footer {
   opacity: 60%;
 }
 
-.pacman-maze {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
 .about-flex {
   display: flex;
   flex-direction: column;
@@ -563,19 +571,16 @@ form div {
 }
 form div input {
   width: 100%;
-  /*max-width: 550px;*/
   height: 2rem;
 }
 form div textarea {
   height: 200px;
   width: 100%;
-  /*max-width: 550px;*/
 }
 form div:nth-of-type(3) {
   display: flex;
   flex-direction: row;
   gap: 50px;
-  /*max-width: 550px;*/
   width: 100%;
 }
 form div:nth-of-type(3) div {
@@ -586,11 +591,9 @@ form div:nth-of-type(3) div {
 }
 form div:nth-of-type(3) div input {
   width: 100%;
-  /*max-width: 250px;*/
 }
 
 .contact-section {
-  /*background-image: url(srilanka-bygning-Edit.png);*/
   background-size: cover;
   background-position: center;
   display: flex;
@@ -603,7 +606,6 @@ form div:nth-of-type(3) div input {
 }
 
 .contact-section-subpage {
-  /*background-image: url(srilanka-bygning-Edit.png);*/
   background-size: cover;
   background-position: center;
   display: flex;
@@ -632,51 +634,6 @@ form div:nth-of-type(3) div input {
 
 .bg-black {
   background-color: black;
-}
-
-.hero-about {
-  max-width: 100%;
-  height: 600px;
-  margin-right: 50px;
-  margin-left: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
-  gap: 50px;
-}
-.hero-about img {
-  height: 100%;
-  position: absolute;
-}
-
-.about-hero-text {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-.about-hero-text div {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 500px;
-}
-
-.about-box {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-}
-.about-box div {
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: start;
-}
-.about-box div h1 {
-  font-size: 2.4rem;
 }
 
 .social-a {
@@ -725,7 +682,7 @@ form div:nth-of-type(3) div input {
   gap: 20px;
   position: absolute;
   bottom: 0px;
-  left: 25px;
+  left: 10px;
   padding-right: 25px;
   transform: translate(0, -35px);
 }
@@ -811,9 +768,6 @@ form div:nth-of-type(3) div input {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  /*a {
-      align-self: center;
-  }*/
 }
 .kompetence-box-mobil div:nth-of-type(1) {
   width: 100%;
@@ -854,14 +808,8 @@ form div:nth-of-type(3) div input {
 .about-hero-section-mobil div:nth-of-type(2) {
   margin-left: 50px;
   margin-right: 50px;
-  /*position: relative;
-  top: -30px;*/
 }
 .about-hero-section-mobil div:nth-of-type(2) div {
-  /*background-image: url(orange-opacity.png);
-  background-size: cover;
-  background-position: center;
-  padding: 50px 10px 50px 10px;*/
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -873,10 +821,8 @@ form div:nth-of-type(3) div input {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  /*padding-left: 25px;
-  padding-right: 25px;*/
 }
-.about-section-mobil div {
+.about-section-mobil div:nth-of-type(1) {
   width: 100%;
   aspect-ratio: 1/1;
   display: flex;
@@ -885,11 +831,14 @@ form div:nth-of-type(3) div input {
   overflow: hidden;
   position: relative;
 }
-.about-section-mobil div img {
+.about-section-mobil div:nth-of-type(1) img {
   height: 100%;
   position: absolute;
 }
-.about-section-mobil p {
+.about-section-mobil div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -898,10 +847,8 @@ form div:nth-of-type(3) div input {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  /*padding-left: 25px;
-  padding-right: 25px;*/
 }
-.about-section-mobil-portrait-img div {
+.about-section-mobil-portrait-img div:nth-of-type(1) {
   width: 100%;
   aspect-ratio: 1/1;
   display: flex;
@@ -910,11 +857,14 @@ form div:nth-of-type(3) div input {
   overflow: hidden;
   position: relative;
 }
-.about-section-mobil-portrait-img div img {
+.about-section-mobil-portrait-img div:nth-of-type(1) img {
   width: 100%;
   position: absolute;
 }
-.about-section-mobil-portrait-img p {
+.about-section-mobil-portrait-img div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   margin-left: 10px;
   margin-right: 10px;
 }
